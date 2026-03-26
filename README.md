@@ -9,17 +9,39 @@ To implement Stop and Wait protocol using NS2 program.
 
 # ALGORITHM
 Step 1: Start the program.
-Step 2: Declare the global variables ns for creating a new simulator. Step 3: Open the network animator file in the write mode.
-Step 4: Open the trace file in the write mode. Step 5: Transfer the packets in network.
+
+Step 2: Declare the global variables ns for creating a new simulator.
+
+Step 3: Open the network animator file in the write mode.
+
+Step 4: Open the trace file in the write mode.
+
+Step 5: Transfer the packets in network.
+
 Step 6: Create the capable no of nodes.
+
 Step 7: Create the duplex-link between the nodes including the delay time, bandwidth and dropping queue mechanism.
-Step 8: Set a tcp connection for source node. Step 9: Set the destination node using tcp sink.
-Step 10: Set the window size and the packet size for the tcp. Step 11: Set up the ftp over the tcp connection.
+
+Step 8: Set a TCP connection for source node.
+
+Step 9: Set the destination node using TCP sink.
+
+Step 10: Set the window size and the packet size for the TCP.
+
+Step 11: Set up the FTP over the TCP connection.
+
 Step 12: Define the plot window and finish procedure.
-Step 13: In the definition of the finish procedure declare the global variables. Step 14: Close the trace file and namfile and execute the network animation file. Step 15: At the particular time call the finish procedure.
+
+Step 13: In the definition of the finish procedure declare the global variables.
+
+Step 14: Close the trace file and namfile and execute the network animation file.
+
+Step 15: At the particular time call the finish procedure.
+
 Step 16: Stop the program.
  
 # PROGRAM
+```
 set ns [new Simulator]
 set namfile [open out.nam w]
 $ns namtrace-all $namfile proc finish {}
@@ -67,8 +89,10 @@ $ns at 3.1 "$ns trace-annotate \"FTP stops\""
 $ns at 0.0 "$n0 label Sender"
 $ns at 0.0 "$n1 label Receiver"
 $ns run
+```
  
 # OUTPUT
+<img width="718" height="380" alt="image" src="https://github.com/user-attachments/assets/dfd35575-c64b-4247-83e9-b27c6b41b152" />
 
 
 
